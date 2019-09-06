@@ -1,6 +1,26 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+*-lock*
+*.lock*
+.idea
+.DS_Store
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
 composer.phar
 /vendor/
-
+/.idea
+*.log
+node_modules/
+/public/sitemap.xml
+/public/sitemap.html
 # Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
 # composer.lock
