@@ -1,26 +1,37 @@
 {
-    "name": "laravel/laravel",
-    "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": [
-        "framework",
-        "laravel"
-    ],
-    "license": "MIT",
-    "require": {
+	"name": "mikrotik-analytics",
+	"description": "fetch mikrotik data and calculate internet usage  per user.",
+	"keywords": ["php", "laravel", "mikrotik", "mikrotik-analytics"],
+	"license": "MIT",
+	"type": "project",
+	"require": {
         "php": "^7.2",
-        "fideloper/proxy": "^4.0",
+		"biscolab/laravel-recaptcha": "~3.6",
+		"barryvdh/laravel-elfinder": "~0.3",
+        "barryvdh/laravel-snappy": "~0.4",
+		"cviebrock/eloquent-sluggable": "~6.0",
+		"fideloper/proxy": "~4.0",
+		"h4cc/wkhtmltoimage-amd64": "~0.12",
+		"h4cc/wkhtmltopdf-amd64": "~0.12",
+		"laracasts/flash": "~3.0",
         "laravel/framework": "^6.0",
-        "laravel/tinker": "^1.0",
-        "laravel/ui": "^1.0"
-    },
-    "require-dev": {
-        "filp/whoops": "^2.0",
+		"laravel/tinker": "~1.0",
+		"predis/predis": "~1.1",
+		"spatie/laravel-analytics": "~3.8",
+		"yajra/laravel-datatables-buttons": "~4.7",
+		"yajra/laravel-datatables-oracle": "~9.6"
+	},
+	"require-dev": {
+		"barryvdh/laravel-debugbar": "~3.2",
+		"barryvdh/laravel-ide-helper": "~2.6",
+		"doctrine/dbal": "~2.8",
+        "facade/ignition": "^1.4",
         "fzaninotto/faker": "^1.4",
+		"laravel/browser-kit-testing": "~5.0",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
         "phpunit/phpunit": "^8.0"
-    },
+	},
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
@@ -47,7 +58,7 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "scripts": {
+	"scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -58,5 +69,5 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    }
+	}
 }

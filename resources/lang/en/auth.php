@@ -4,16 +4,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Language Lines
+    | English Auth Language Lines
     |--------------------------------------------------------------------------
-    |
-    | The following language lines are used during authentication for various
-    | messages that we need to display to the user. You are free to modify
-    | these language lines according to your application's requirements.
-    |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'failed'       => 'These credentials do not match our records.',
+    'login' => [
+        'email'    => 'E-mail address',
+        'forgot'   => 'I forgot my password?',
+        'password' => 'Password',
+        'remember' => 'Remember Me',
+        'submit'   => 'Login',
+        'title'    => 'Login'
+    ],
+    'logout'       => 'Logout',
+    'throttle'     => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];
