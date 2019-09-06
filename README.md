@@ -1,4 +1,4 @@
-# mikrotik-analytics
+# Mikrotik-Analytics
 
 Fetch mikrotik data (using http://SERVER_IP:8080/accounting/ip.cgi) shows it and caculate internet usage per user.
 
