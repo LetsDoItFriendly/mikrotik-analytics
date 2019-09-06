@@ -1,5 +1,5 @@
 {
-	"name": "mikrotik-analytics",
+	"name": "lets-do-friendly/mikrotik-analytics",
 	"description": "fetch mikrotik data and calculate internet usage  per user.",
 	"keywords": ["php", "laravel", "mikrotik", "mikrotik-analytics"],
 	"license": "MIT",
