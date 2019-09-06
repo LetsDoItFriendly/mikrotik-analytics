@@ -1,6 +1,6 @@
 {
-    "/dist/js/admin.js": "/dist/js/admin.js?id=a9d7599222c6d664a887",
-    "/dist/css/admin.css": "/dist/css/admin.css?id=e542b8dc278522260e7a",
-    "/dist/css/app.css": "/dist/css/app.css?id=97cf172ddad40756c5f1",
-    "/dist/js/app.js": "/dist/js/app.js?id=b80e0c1ee7d4d5a8c46e"
+    "/dist/js/admin.js": "/dist/js/admin.js",
+    "/dist/css/admin.css": "/dist/css/admin.css",
+    "/dist/css/app.css": "/dist/css/app.css",
+    "/dist/js/app.js": "/dist/js/app.js"
 }
