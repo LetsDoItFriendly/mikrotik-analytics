@@ -6,6 +6,11 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
 
+/**
+ * Class User
+ * @package App\Models
+ * @property Group[] groups
+ */
 class User extends Authenticatable
 {
     use Notifiable;
@@ -47,5 +52,13 @@ class User extends Authenticatable
     public function getPictureAttribute() : string
     {
         return 'https://ssl.gstatic.com/accounts/ui/avatar_2x.png';
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function groups() : \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Group::class, "user_id");
     }
 }

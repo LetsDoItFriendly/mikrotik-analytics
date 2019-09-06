@@ -32,6 +32,17 @@ return [
         'index'  => 'Categories',
         'show'   => 'Show category'
     ],
+    'group' => [
+        'create' => 'Create group',
+        'edit'   => 'Edit group',
+        'fields' => [
+            'user_id' => 'User',
+            'ip_count' => 'IP Count',
+            'name'     => 'Group Name',
+        ],
+        'index'  => 'Groups',
+        'show'   => 'Show group'
+    ],
     'dashboard' => [
         'fields' => [
             'alexa_local'     => 'Alexa Local',
