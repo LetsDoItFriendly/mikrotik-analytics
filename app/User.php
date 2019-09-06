@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -10,6 +12,9 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $table = "users";
+
+    public $timestamps = true;
     /**
      * The attributes that are mass assignable.
      *
@@ -36,4 +41,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /*
+     * Relations Methods
+     */
+
+    /**
+     * @return HasMany
+     */
+    public function groups()
+    {
+        return $this->hasMany("\\App\\Group", "user_id");
+    }
 }
