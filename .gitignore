@@ -2,7 +2,7 @@
 /public/storage
 /storage/*.key
 /vendor
-.env
+/.env
 .env.backup
 *-lock*
 *.lock*
