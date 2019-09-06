@@ -19,7 +19,7 @@ class ApplicationTest extends TestCase
     /**
      * Create article
      */
-    public function setUp()
+    public function setUp() : void
     {
         parent::setUp();
         $this->articles = factory(Article::class)->make([
