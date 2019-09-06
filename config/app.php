@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Laravel 6 Simple CMS'),
 
     /*
     |--------------------------------------------------------------------------
@@ -165,6 +165,14 @@ return [
         /*
          * Package Service Providers...
          */
+        Barryvdh\Elfinder\ElfinderServiceProvider::class,
+        Barryvdh\Snappy\ServiceProvider::class,
+        Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        Spatie\Analytics\AnalyticsServiceProvider::class,
+        Yajra\DataTables\ButtonsServiceProvider::class,
+        Yajra\DataTables\DatatablesServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -172,7 +180,9 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\CollectionServiceProvider::class,
         App\Providers\EventServiceProvider::class,
+        App\Providers\HelperServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
     ],

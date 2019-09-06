@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -21,19 +22,31 @@ class LoginController extends Controller
     use AuthenticatesUsers;
 
     /**
-     * Where to redirect users after login.
+     * Where to redirect users after login / registration.
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/admin';
 
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest', ['except' => 'logout']);
+    }
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    protected function validateLogin(Request $request): void
+    {
+        $rules = [$this->username() => 'required|string', 'password' => 'required|string'];
+        if (!empty(env('RECAPTCHA_SITEKEY')) && strpos(env('RECAPTCHA_SITEKEY'), 'google') === false) {
+            $rules['g-recaptcha-response'] = 'required|recaptcha';
+        }
+        $this->validate($request, $rules);
     }
 }
