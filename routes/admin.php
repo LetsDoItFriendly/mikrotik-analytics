@@ -7,3 +7,4 @@ Route::resource('page', 'PageController');
 Route::resource('user', 'UserController');
 Route::resource('group', 'GroupController');
 Route::resource('mikrotik', 'MikrotikController');
+Route::resource('internet_protocol', 'InternetProtocolController');

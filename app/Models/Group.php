@@ -34,6 +34,6 @@ class Group extends SluggableModel
      */
     public function ips() : \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(IP::class, "group_id");
+        return $this->hasMany(InternetProtocol::class, "group_id");
     }
 }

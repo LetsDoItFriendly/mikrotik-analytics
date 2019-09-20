@@ -13,7 +13,8 @@ class GroupController extends AdminController
     /**
      * @var array
      */
-    protected $validation = ['name' => 'required|string|max:200',
+    protected $validation = [
+        'name' => 'required|string|max:200',
         'user_id' => 'required|exists:users,id'
     ];
 

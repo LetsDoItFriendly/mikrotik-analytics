@@ -32,28 +32,6 @@ return [
         'index'  => 'Categories',
         'show'   => 'Show category'
     ],
-    'group' => [
-        'create' => 'Create group',
-        'edit'   => 'Edit group',
-        'fields' => [
-            'user_id' => 'User ID',
-            'ip_count' => 'IP Count',
-            'name'     => 'Group Name',
-        ],
-        'index'  => 'Groups',
-        'show'   => 'Show group'
-    ],
-    'mikrotik' => [
-        'create' => 'Create mikrotik',
-        'edit'   => 'Edit mikrotik',
-        'fields' => [
-            'ip_count' => 'IP Count',
-            'name'     => 'Mikrotik Name',
-            'url'     => 'Mikrotik Url',
-        ],
-        'index'  => 'Mikrotiks',
-        'show'   => 'Show mikrotik'
-    ],
     'dashboard' => [
         'fields' => [
             'alexa_local'     => 'Alexa Local',
@@ -84,6 +62,41 @@ return [
     ],
     'elfinder' => [
         'index' => 'File Manager',
+    ],
+    'group' => [
+        'create' => 'Create group',
+        'edit'   => 'Edit group',
+        'fields' => [
+            'user_id' => 'User ID',
+            'ip_count' => 'IP Count',
+            'name'     => 'Group',
+        ],
+        'index'  => 'Groups',
+        'show'   => 'Show group'
+    ],
+    'internet_protocol' => [
+        'create' => 'Add ip',
+        'edit'   => 'Edit ip',
+        'fields' => [
+            'mikrotik_id'  => 'Mikrotik',
+            'group_id'      => 'User Group',
+            'name'  => 'Address',
+            'gateway' => 'GateWay',
+            'type'        => 'Type'
+        ],
+        'index'  => 'IPs',
+        'show'   => 'Show ip'
+    ],
+    'mikrotik' => [
+        'create' => 'Create mikrotik',
+        'edit'   => 'Edit mikrotik',
+        'fields' => [
+            'ip_count' => 'IP Count',
+            'name'     => 'Mikrotik Name',
+            'url'     => 'Mikrotik Url',
+        ],
+        'index'  => 'Mikrotiks',
+        'show'   => 'Show mikrotik'
     ],
     'page' => [
         'create' => 'Create page',
