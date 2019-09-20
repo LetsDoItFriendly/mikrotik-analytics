@@ -17,6 +17,7 @@
 {{--                @include('partials.admin.nav.dropdown', ['resource' => 'article', 'icon' => 'book'])--}}
 {{--                @include('partials.admin.nav.dropdown', ['resource' => 'category', 'icon' => 'bookmark'])--}}
 {{--                @include('partials.admin.nav.dropdown', ['resource' => 'page', 'icon' => 'file'])--}}
+                @include('partials.admin.nav.dropdown', ['resource' => 'mikrotik', 'icon' => 'file'])
                 @include('partials.admin.nav.dropdown', ['resource' => 'user', 'icon' => 'users'])
                 @include('partials.admin.nav.dropdown', ['resource' => 'group', 'icon' => 'bookmark'])
                 <!--  Do not remove line NAVIGATION_FLAG if you want to use CMS generator properly -->

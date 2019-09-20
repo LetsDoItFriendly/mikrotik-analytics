@@ -6,3 +6,4 @@ Route::resource('category', 'CategoryController');
 Route::resource('page', 'PageController');
 Route::resource('user', 'UserController');
 Route::resource('group', 'GroupController');
+Route::resource('mikrotik', 'MikrotikController');

@@ -43,6 +43,17 @@ return [
         'index'  => 'Groups',
         'show'   => 'Show group'
     ],
+    'mikrotik' => [
+        'create' => 'Create mikrotik',
+        'edit'   => 'Edit mikrotik',
+        'fields' => [
+            'ip_count' => 'IP Count',
+            'name'     => 'Mikrotik Name',
+            'url'     => 'Mikrotik Url',
+        ],
+        'index'  => 'Mikrotiks',
+        'show'   => 'Show mikrotik'
+    ],
     'dashboard' => [
         'fields' => [
             'alexa_local'     => 'Alexa Local',
