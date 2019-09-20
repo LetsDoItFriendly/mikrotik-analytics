@@ -3,11 +3,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-
 use App\Base\Controllers\AdminController;
 use App\Http\Controllers\Admin\DataTables\MikrotikDataTable;
 use App\Models\Mikrotik;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 class MikrotikController extends AdminController
 {

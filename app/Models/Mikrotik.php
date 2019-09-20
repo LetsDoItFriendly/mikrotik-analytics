@@ -11,6 +11,7 @@ use App\Base\SluggableModel;
  * @property string name
  * @property string url
  * @property string info
+ * @property IP[] ips
  */
 class Mikrotik extends SluggableModel
 {
@@ -19,7 +20,15 @@ class Mikrotik extends SluggableModel
      *
      * @var array
      */
-    protected $fillable = ['name', 'url', 'info'];
+    protected $fillable = ['name', 'url'];
 
     public $timestamps = true;
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function ips() : \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(IP::class, "mikrotik_id");
+    }
 }

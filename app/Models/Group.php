@@ -28,4 +28,12 @@ class Group extends SluggableModel
     {
         return $this->belongsTo(User::class, "user_id");
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function ips() : \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(IP::class, "group_id");
+    }
 }
