@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Base\Controllers\AdminController;
 use App\Http\Controllers\Admin\DataTables\GroupDataTable;
 use App\Models\Group;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class GroupController extends AdminController
@@ -31,7 +32,7 @@ class GroupController extends AdminController
      */
     public function create()
     {
-        return view('admin.forms.group', $this->formVariables('group', null));
+        return view('admin.forms.group', $this->formVariables('group', null, $this->options()));
     }
 
     /**
@@ -62,7 +63,7 @@ class GroupController extends AdminController
      */
     public function edit(Group $group)
     {
-        return view('admin.forms.group', $this->formVariables('group', $group));
+        return view('admin.forms.group', $this->formVariables('group', $group, $this->options()));
     }
 
     /**
@@ -86,5 +87,13 @@ class GroupController extends AdminController
     public function destroy(Group $group)
     {
         return $this->destroyFlashRedirect($group);
+    }
+
+    /**
+     * @return array
+     */
+    protected function options()
+    {
+        return ['options' => User::pluck('email', 'id')];
     }
 }

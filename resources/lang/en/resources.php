@@ -36,7 +36,7 @@ return [
         'create' => 'Create group',
         'edit'   => 'Edit group',
         'fields' => [
-            'user_id' => 'User',
+            'user_id' => 'User ID',
             'ip_count' => 'IP Count',
             'name'     => 'Group Name',
         ],

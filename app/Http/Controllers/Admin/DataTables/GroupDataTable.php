@@ -40,7 +40,7 @@ class GroupDataTable extends DataTableController
     public function query()
     {
         return $this->applyScopes(
-            Group::leftJoin('ips', 'groups.id', '=', 'ips.group_id')
+            Group::with('user')->leftJoin('ips', 'groups.id', '=', 'ips.group_id')
                 ->selectRaw('groups.*, count(ips.id) as ip_count')
                 ->groupBy('groups.id')
         );
