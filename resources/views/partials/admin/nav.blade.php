@@ -20,7 +20,7 @@
                 @include('partials.admin.nav.dropdown', ['resource' => 'user', 'icon' => 'users'])
                 @include('partials.admin.nav.dropdown', ['resource' => 'group', 'icon' => 'bookmark'])
                 @include('partials.admin.nav.dropdown', ['resource' => 'mikrotik', 'icon' => 'file'])
-                @include('partials.admin.nav.dropdown', ['resource' => 'ip', 'icon' => 'book'])
+                @include('partials.admin.nav.dropdown', ['resource' => 'internet_protocol', 'icon' => 'book'])
 
                 <!--  Do not remove line NAVIGATION_FLAG if you want to use CMS generator properly -->
                 <!-- Check the file app/Console/Commands/Cms/Resource.php -->

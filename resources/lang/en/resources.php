@@ -74,7 +74,7 @@ return [
         'index'  => 'Groups',
         'show'   => 'Show group'
     ],
-    'ip' => [
+    'internet_protocol' => [
         'create' => 'Add ip',
         'edit'   => 'Edit ip',
         'fields' => [
@@ -86,15 +86,6 @@ return [
         ],
         'index'  => 'IPs',
         'show'   => 'Show ip'
-    ],
-    'i_p' => [
-        'fields' => [
-            'mikrotik_id'  => 'Mikrotik',
-            'group_id'      => 'User Group',
-            'name'  => 'Address',
-            'gateway' => 'GateWay',
-            'type'        => 'Type'
-        ],
     ],
     'mikrotik' => [
         'create' => 'Create mikrotik',

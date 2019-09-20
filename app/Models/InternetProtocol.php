@@ -17,14 +17,13 @@ use App\Base\SluggableModel;
  * @property Group group
  * @property Mikrotik mikrotik
  */
-class IP extends SluggableModel
+class InternetProtocol extends SluggableModel
 {
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $table = 'ips';
     protected $fillable = ['name', 'gateway', 'type', 'group_id', 'mikrotik_id'];
     public $timestamps = true;
 

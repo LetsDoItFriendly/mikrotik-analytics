@@ -5,14 +5,14 @@ namespace App\Http\Controllers\Admin\DataTables;
 
 
 use App\Base\Controllers\DataTableController;
-use App\Models\IP;
+use App\Models\InternetProtocol;
 
-class IPDataTable extends DataTableController
+class InternetProtocolDataTable extends DataTableController
 {
     /**
      * @var string
      */
-    protected $model = IP::class;
+    protected $model = InternetProtocol::class;
 
     /**
      * Columns to show
@@ -40,7 +40,7 @@ class IPDataTable extends DataTableController
      */
     public function query()
     {
-        return $this->applyScopes(IP::with('group'));
+        return $this->applyScopes(InternetProtocol::with('group'));
     }
 
 }
