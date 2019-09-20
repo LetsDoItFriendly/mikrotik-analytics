@@ -13,7 +13,8 @@ class MikrotikController extends AdminController
     /**
      * @var array
      */
-    protected $validation = ['name' => 'required|string|max:200',
+    protected $validation = [
+        'name' => 'required|string|max:200',
         'url' => 'required'
     ];
 

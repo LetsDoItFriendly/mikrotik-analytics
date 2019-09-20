@@ -17,9 +17,11 @@
 {{--                @include('partials.admin.nav.dropdown', ['resource' => 'article', 'icon' => 'book'])--}}
 {{--                @include('partials.admin.nav.dropdown', ['resource' => 'category', 'icon' => 'bookmark'])--}}
 {{--                @include('partials.admin.nav.dropdown', ['resource' => 'page', 'icon' => 'file'])--}}
-                @include('partials.admin.nav.dropdown', ['resource' => 'mikrotik', 'icon' => 'file'])
                 @include('partials.admin.nav.dropdown', ['resource' => 'user', 'icon' => 'users'])
                 @include('partials.admin.nav.dropdown', ['resource' => 'group', 'icon' => 'bookmark'])
+                @include('partials.admin.nav.dropdown', ['resource' => 'mikrotik', 'icon' => 'file'])
+                @include('partials.admin.nav.dropdown', ['resource' => 'ip', 'icon' => 'book'])
+
                 <!--  Do not remove line NAVIGATION_FLAG if you want to use CMS generator properly -->
                 <!-- Check the file app/Console/Commands/Cms/Resource.php -->
 				<!--NAVIGATION_FLAG-->
