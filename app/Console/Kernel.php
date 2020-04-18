@@ -14,7 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\Console\Commands\Cms\Initialize::class,
-        \App\Console\Commands\Cms\Resource::class
+        \App\Console\Commands\Cms\Resource::class,
+        \App\Console\Commands\ExportUsers::class
     ];
 
     /**
