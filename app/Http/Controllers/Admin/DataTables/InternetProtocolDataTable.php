@@ -26,7 +26,7 @@ class InternetProtocolDataTable extends DataTableController
      *
      * @var array
      */
-    protected $eager_columns = ['group' => 'name'];
+    protected $eager_columns = ['group' => 'name', 'mikrotik' => 'name'];
 
     /**
      * @var bool

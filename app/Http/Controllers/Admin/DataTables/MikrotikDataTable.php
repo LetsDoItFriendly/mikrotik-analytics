@@ -41,8 +41,8 @@ class MikrotikDataTable extends DataTableController
     public function query()
     {
         return $this->applyScopes(
-            Mikrotik::leftJoin('ips', 'mikrotiks.id', '=', 'ips.mikrotik_id')
-                ->selectRaw('mikrotiks.*, count(ips.id) as ip_count')
+            Mikrotik::leftJoin('internet_protocols', 'mikrotiks.id', '=', 'internet_protocols.mikrotik_id')
+                ->selectRaw('mikrotiks.*, count(internet_protocols.id) as ip_count')
                 ->groupBy('mikrotiks.id')
         );
     }

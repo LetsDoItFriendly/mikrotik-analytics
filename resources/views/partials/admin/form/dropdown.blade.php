@@ -6,9 +6,15 @@
                 @if (isset($null) && $null === true)
                     <option value="{{ null }}">{{ __('admin.none') }}</option>
                 @endif
-                @foreach ($options as $key => $value)
-                    <option {{ $key === (${$resource}->$attribute ?? old($attribute)) ? 'selected' : '' }} value="{{ isset($valueOnly) ? $value :  $key }}">{{ $value }}</option>
-                @endforeach
+                @if(isset($index))
+                    @foreach ($options[$index] as $key => $value)
+                        <option {{ $key === (${$resource}->$attribute ?? old($attribute)) ? 'selected' : '' }} value="{{ isset($valueOnly) ? $value :  $key }}">{{ $value }}</option>
+                    @endforeach
+                @else
+                    @foreach ($options as $key => $value)
+                        <option {{ $key === (${$resource}->$attribute ?? old($attribute)) ? 'selected' : '' }} value="{{ isset($valueOnly) ? $value :  $key }}">{{ $value }}</option>
+                    @endforeach
+                @endif
             </select>
         </div>
     </div>

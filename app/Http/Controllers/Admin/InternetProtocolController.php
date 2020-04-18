@@ -105,8 +105,10 @@ class InternetProtocolController extends AdminController
     protected function options()
     {
         return [
-            'options' => Group::pluck('name', 'id'),
-//            'second_options' =>   Mikrotik::pluck('name', 'id'),
+            'options' => [
+                "group" => Group::pluck('name', 'id'),
+                "mikrotik" => Mikrotik::pluck('name', 'id')
+            ],
         ];
     }
 }
